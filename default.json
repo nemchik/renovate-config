@@ -5,7 +5,7 @@
     "config:js-app",
     "customManagers:biomeVersions",
     "customManagers:githubActionsVersions",
-    "npm:unpublishSafe",
+    "security:minimumReleaseAgeNpm",
     ":automergeBranch",
     ":automergeDigest",
     ":automergeLinters",
