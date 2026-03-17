@@ -16,5 +16,5 @@
     ":maintainLockFilesWeekly",
     ":renovatePrefix"
   ],
-  "baseBranches": ["$default"]
+  "baseBranchPatterns": ["$default"]
 }
