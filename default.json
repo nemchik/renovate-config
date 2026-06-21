@@ -22,7 +22,7 @@
       "customType": "regex",
       "fileMatch": ["(^|/)package\\.json$"],
       "matchStrings": [
-        "\"devEngines\":\\s*\\{\\s*\"runtime\":\\s*\"(?<depName>node)\",\\s*\"version\":\\s*\"(?<currentValue>[^\"]+)\""
+        "\"devEngines\":\\s*\\{\\s*\"runtime\":\\s*\\{\\s*\"name\":\\s*\"(?<depName>node)\",\\s*\"version\":\\s*\"(?<currentValue>[^\"]+)\""
       ],
       "datasourceTemplate": "node",
       "versioningTemplate": "node"
