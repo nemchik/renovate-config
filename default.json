@@ -19,13 +19,11 @@
   "baseBranchPatterns": ["$default"],
   "customManagers": [
     {
-      "customType": "regex",
+      "customType": "json",
       "fileMatch": ["(^|/)package\\.json$"],
       "matchStrings": [
         "devEngines.runtime.{ \"depName\": name, \"currentValue\": version }"
-      ],
-      "datasourceTemplate": "node",
-      "versioningTemplate": "node"
+      ]
     }
   ]
 }
