@@ -20,9 +20,9 @@
   "customManagers": [
     {
       "customType": "jsonata",
-      "fileMatch": ["(^|\/)package\\.json$"],
+      "managerFilePatterns": ["**/package.json"],
       "matchStrings": [
-        "$exists(devEngines.runtime) ? [{\"depName\": devEngines.runtime.name, \"currentValue\": devEngines.runtime.version, \"datasource\": \"node\", \"versioning\": \"node\"}] : []"
+        "$exists(devEngines.runtime) ? [{\"depName\": devEngines.runtime.name, \"currentValue\": devEngines.runtime.version, \"datasource\": devEngines.runtime.name, \"versioning\": devEngines.runtime.name}] : []"
       ]
     }
   ]
