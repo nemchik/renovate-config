@@ -16,5 +16,16 @@
     ":maintainLockFilesWeekly",
     ":renovatePrefix"
   ],
-  "baseBranchPatterns": ["$default"]
+  "baseBranchPatterns": ["$default"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/)package\\.json$"],
+      "matchStrings": [
+        "\"devEngines\":\\s*\\{\\s*\"runtime\":\\s*\"(?<depName>node)\",\\s*\"version\":\\s*\"(?<currentValue>[^\"]+)\""
+      ],
+      "datasourceTemplate": "node",
+      "versioningTemplate": "node"
+    }
+  ]
 }
