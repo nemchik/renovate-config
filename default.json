@@ -21,7 +21,7 @@
     {
       "customType": "jsonata",
       "fileFormat": "json",
-      "managerFilePatterns": ["**/package.json"],
+      "managerFilePatterns": ["/package.json/"],
       "matchStrings": [
         "$exists(devEngines.runtime) ? [{\"depName\": devEngines.runtime.name, \"currentValue\": devEngines.runtime.version, \"datasource\": devEngines.runtime.name, \"versioning\": devEngines.runtime.name}] : []"
       ]
