@@ -20,12 +20,10 @@
   "customManagers": [
     {
       "customType": "jsonata",
-      "fileMatch": ["(^|/)package\\.json$"],
+      "fileMatch": ["(^|\/)package\\.json$"],
       "matchStrings": [
-        "devEngines.runtime.{ \"depName\": name, \"currentValue\": version }"
-      ],
-      "datasourceTemplate": "node",
-      "versioningTemplate": "node"
+        "$exists(devEngines.runtime) ? [{\"depName\": devEngines.runtime.name, \"currentValue\": devEngines.runtime.version, \"datasource\": \"node\", \"versioning\": \"node\"}] : []"
+      ]
     }
   ]
 }
