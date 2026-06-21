@@ -19,7 +19,7 @@
   "baseBranchPatterns": ["$default"],
   "customManagers": [
     {
-      "customType": "json",
+      "customType": "jsonata",
       "fileMatch": ["(^|/)package\\.json$"],
       "matchStrings": [
         "devEngines.runtime.{ \"depName\": name, \"currentValue\": version }"
